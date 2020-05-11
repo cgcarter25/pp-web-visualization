@@ -13,7 +13,7 @@ function showPassword() {
 }
 
 function loginIntro(e) {
-  if (password.value === 'asdf' && i < 3) {
+  if (password.value === 'OpenSesame' && i < 3) {
     // Runs 5 times, with values of step 0 through 4.
     console.log(password.value);
     setTimeout( () => {
