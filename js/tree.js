@@ -366,7 +366,7 @@ function clickOption1Left() {
   //give arrow permanent opacity
   setTimeout(() => {
     arrow1Left = 1;
-  },10000)
+  },1000)
 }
 
 function clickOption1Right() {
@@ -380,7 +380,7 @@ function clickOption1Right() {
   //give arrow permanent opacity
   setTimeout(() => {
     arrow1Right = 1;
-  },10000)
+  },1000)
 }
 
 function clickOption2aLeft() {
@@ -394,7 +394,7 @@ function clickOption2aLeft() {
   //give arrow permanent opacity
   setTimeout(() => {
     arrow2aLeft = 1;
-  },10000)
+  },1000)
 }
 
 function clickOption2aRight() {
@@ -408,7 +408,7 @@ function clickOption2aRight() {
   //give arrow permanent opacity
   setTimeout(() => {
     arrow2aRight = 1;
-  },10000)
+  },1000)
 }
 
 function clickOption2bLeft() {
@@ -422,7 +422,7 @@ function clickOption2bLeft() {
   //give arrow permanent opacity
   setTimeout(() => {
     arrow2bLeft = 1;
-  },10000)
+  },1000)
 }
 
 function clickOption2bRight() {
@@ -436,7 +436,7 @@ function clickOption2bRight() {
   //give arrow permanent opacity
   setTimeout(() => {
     arrow2bRight = 1;
-  },10000)
+  },1000)
 }
 
 function clickOption3aLeft() {
@@ -450,7 +450,7 @@ function clickOption3aLeft() {
   //give arrow permanent opacity
   setTimeout(() => {
     arrow3aLeft = 1;
-  },10000)
+  },1000)
 }
 
 function clickOption3aRight() {
@@ -464,7 +464,7 @@ function clickOption3aRight() {
   //give arrow permanent opacity
   setTimeout(() => {
     arrow3aRight = 1;
-  },10000)
+  },1000)
 }
 
 function clickOption3bLeft() {
@@ -478,7 +478,7 @@ function clickOption3bLeft() {
   //give arrow permanent opacity
   setTimeout(() => {
     arrow3bLeft = 1;
-  },10000)
+  },1000)
 }
 
 function clickOption3bRight() {
@@ -492,7 +492,7 @@ function clickOption3bRight() {
   //give arrow permanent opacity
   setTimeout(() => {
     arrow3bRight = 1;
-  },10000)
+  },1000)
 }
 
 function clickOption4Left() {
@@ -506,7 +506,7 @@ function clickOption4Left() {
   //give arrow permanent opacity
   setTimeout(() => {
     arrow4Left = 1;
-  },10000)
+  },1000)
 }
 
 function clickOption4Right() {
@@ -520,7 +520,7 @@ function clickOption4Right() {
   //give arrow permanent opacity
   setTimeout(() => {
     arrow4Right = 1;
-  },10000)
+  },1000)
 }
 
 getBrowserWidth();
@@ -542,6 +542,22 @@ function showAllResults() {
 }
 
 function hideAllResults() {
+  //give arrow permanent opacity
+  setTimeout(() => {
+    arrow1Left = 0;
+    arrow1Right = 0;
+    arrow2aLeft = 0;
+    arrow2aRight = 0;
+    arrow2bLeft = 0;
+    arrow2bRight = 0;
+    arrow3aLeft = 0;
+    arrow3aRight = 0;
+    arrow3bLeft = 0;
+    arrow3bRight = 0;
+    arrow4Left = 0;
+    arrow4Right = 0;
+  }, 0);
+
   //node 1Left
   //hide next node
   gsap.to('#left-node-2', 0.5, {opacity: 0, ease: Power1.easeOut, delay: 3});
@@ -626,21 +642,6 @@ function hideAllResults() {
   gsap.to('#arrow4Right', 1, {drawSVG: "0%", ease: Power1.easeOut});
   gsap.to('#arrowhead4Right', .25, {scale: 0});
 
-  //give arrow permanent opacity
-  setTimeout(() => {
-    arrow1Left = 0;
-    arrow1Right = 0;
-    arrow2aLeft = 0;
-    arrow2aRight = 0;
-    arrow2bLeft = 0;
-    arrow2bRight = 0;
-    arrow3aLeft = 0;
-    arrow3aRight = 0;
-    arrow3bLeft = 0;
-    arrow3bRight = 0;
-    arrow4Left = 0;
-    arrow4Right = 0;
-  }, 0);
 }
 // function drawArrows() {
 //   document.querySelector('.svg').innerHTML = `<svg class="arrow-canvas" width="${document.querySelector('body').clientWidth}" height="${document.querySelector('body').clientHeight}"></svg>`
