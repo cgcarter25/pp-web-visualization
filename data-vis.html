@@ -32,53 +32,66 @@
   </div>
   <div class="wrapper-data-vis">
     <div class="svg"></div>
-    <div class="top-nav">
-      <h1 class="text-center py-3 mb-5">Differentiators of Care Consideration Among Young Adults</h1>
+    <div class="top-nav d-flex justify-content-center sticky-top">
+      <h1 class="text-center py-3 px-5">Differentiators of Care Consideration Among Young Adults</h1>
+      <div class="dropdown">
+          <button class="btn-block dropdown-toggle px-3 mt-3" data-toggle="dropdown">HOW TO VIEW</button>
+          <div class="dropdown-menu">
+            <div class="nav-explanation p-3 d-flex justify-content-around">
+              <p onClick = "showAllResults()" class="text-white all-results mb-0"><img src="img/play.png" alt="" width="40px">.</p>
+              <p onClick = "hideAllResults()" class="text-white all-results mb-0"><img src="img/rewind.png" alt="" width="40px"></p>
+            </div>
+            <div class="nav-click p-3">
+              <p class="text-white lead" >Or click each option to see how participants responded.</p>
+            </div>
+          </div>
+      </div>
     </div>
+
     <div class="node mx-auto">
       <h2 class="text-center prompt">In your own view, is Planned Parenthood for:</h2>
       <div class="options d-flex justify-content-center" id="option-1">
-        <h3 class="yes-no">Other people / not sure</h3>
-        <h3 class="yes-no">People like me</h3>
+        <h5 onClick = "clickOption1Left()" class="yes-no text-right" id="option1Left">Other people / not sure</h5>
+        <h5 onClick = "clickOption1Right()" class="yes-no" id="option1Right">People like me</h5>
       </div>
     </div>
     <div class="d-flex justify-content-center">
-      <div class="node l-2">
+      <div class="node l-2" id="left-node-2">
         <h2 class="text-center prompt" id="question-2-left">If I were a patient at Planned Parenthood, I would feel comfortable telling my friends that I went there.</h2>
         <div class="options d-flex justify-content-center" id="option-2-left">
-          <h3 class="yes-no">Disagree / not sure</h3>
-          <h3 class="yes-no">Agree</h3>
+          <h5 onClick = "clickOption2aLeft()" class="yes-no text-right" id="option2aLeft">Disagree / not sure</h5>
+          <h5 onClick = "clickOption2aRight()" class="yes-no" id="option2aRight">Agree</h5>
         </div>
       </div>
-      <div class="node l-2">
+      <div class="node l-2" id="right-node-2">
         <h2 class="text-center prompt" id="question-2-right">Is Planned Parenthood convenient?</h2>
         <div class="options d-flex justify-content-center" id="option-2-right">
-          <h3 class="yes-no">No / not sure</h3>
-          <h3 class="yes-no">Yes</h3>
+          <h5 onClick = "clickOption2bLeft()" class="yes-no text-right" id="option2bLeft">No / not sure</h5>
+          <h5 onClick = "clickOption2bRight()" class="yes-no" id="option2bRight">Yes</h5>
         </div>
       </div>
     </div>
     <div class="d-flex justify-content-center">
-      <div class="node l-3">
+      <div class="node l-3" id="left-node-3">
         <h2 class="text-center prompt" id="question-3-left">Race / Ethnicity</h2>
         <div class="options d-flex justify-content-center" id="option-3-left">
-          <h3 class="yes-no"><u>Not</u> Black</h3>
-          <h3 class="yes-no">Black</h3>
+          <h5 onClick = "clickOption3aLeft()" class="yes-no text-right" id="option3aLeft"><u>Not</u> Black</h5>
+          <h5 onClick = "clickOption3aRight()" class="yes-no" id="option3aRight">Black</h5>
         </div>
       </div>
-      <div class="node l-3">
+      <div class="node l-3" id="right-node-3">
         <h2 class="text-center prompt" id="question-3-right">Are you very familiar with Planned Parenthood?</h2>
         <div class="options d-flex justify-content-center" id="option-3-right">
-          <h3 class="yes-no">No</h3>
-          <h3 class="yes-no">Yes</h3>
+          <h5 onClick = "clickOption3bLeft()" class="yes-no text-right" id="option3bLeft">No</h5>
+          <h5 onClick = "clickOption3bRight()" class="yes-no" id="option3bRight">Yes</h5>
         </div>
       </div>
     </div>
-    <div class="node l-4">
+    <div class="node l-4" id="node-4">
       <h2 class="text-center prompt" id="question-4">Planned Parenthood stands with all people.</h2>
       <div class="options d-flex justify-content-center" id="option-4">
-        <h3 class="yes-no"><u>Not</u> strongly agree</h3>
-        <h3 class="yes-no">Strongly agree</h3>
+        <h5 onClick = "clickOption4Left()" class="yes-no text-right" id="option4Left"><u>Not</u> strongly agree</h5>
+        <h5 onClick = "clickOption4Right()" class="yes-no" id="option4Right">Strongly agree</h5>
       </div>
     </div>
     <div class="percentages d-flex justify-content-around">
@@ -118,6 +131,7 @@
         <h4 class="sub-percentage">24% Would <u>not</u> consider PP for care</h4>
       </div>
     </div>
+    <p onClick = "hideAllResults()" class="float-right d-inline lead all-results"><img src="img/rewind-color.png" alt="" class="px-1" width="40px"><b class="px-2">REWIND</b></p>
     <footer>
       <h5 class="text-center py-3 mt-5 mb-0">PerryUndem | Brand Tracker</h5>
     </footer>
@@ -125,6 +139,15 @@
   <script src="https://code.jquery.com/jquery-3.3.1.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8=" crossorigin="anonymous"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
   <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.1/js/bootstrap.min.js" integrity="sha384-smHYKdLADwkXOn1EmN1qk/HfnUcbVRZyYmZ4qpPea6sjB/pTJ0euyQp0Mk8ck+5T" crossorigin="anonymous"></script>
+  <!-- GSAP -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.2.4/gsap.min.js"></script>
+  <!-- scrollmagic -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/ScrollMagic/2.0.7/ScrollMagic.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/ScrollMagic/2.0.7/plugins/animation.gsap.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/ScrollMagic/2.0.7/plugins/debug.addIndicators.min.js"></script>
+  <script src="js/jquery.zoomooz.min.js"></script>
+  <script src="js/DrawSVGPlugin.min.js"></script>
   <script src="js/tree.js"></script>
+
 </body>
 </html>

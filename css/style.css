@@ -77,6 +77,30 @@
   position: absolute;
 }
 
+.arrow-off {
+  opacity: 0;
+}
+
+#left-node-2 {
+  opacity: 0;
+}
+
+#right-node-2 {
+  opacity: 0;
+}
+
+#left-node-3 {
+  opacity: 0;
+}
+
+#right-node-3 {
+  opacity: 0;
+}
+
+#node-4 {
+  opacity: 0;
+}
+
 .wrapper {
   height: 100vh;
   width: 100vw;
@@ -189,17 +213,7 @@ input[type=password]:active, textarea:active, select:active {
 .checkbox-label input {
   position: absolute;
   opacity: 0;
-  cursor: pointer;
 }
-
-/* .checkbox-label .checkbox-custom-static {
-  position: absolute;
-  height: 24px;
-  width: 24px;
-  background-color: transparent;
-  border-radius: 12px;
-  border: 2px solid white;
-} */
 
 .checkbox-label .checkbox-custom {
   position: absolute;
@@ -212,6 +226,8 @@ input[type=password]:active, textarea:active, select:active {
   -moz-transition: all 0.3s ease-out;
   -ms-transition: all 0.3s ease-out;
   -o-transition: all 0.3s ease-out;
+  cursor: pointer;
+
 }
 
 .checkbox-label .checkbox-custom::after {
@@ -240,7 +256,47 @@ button {
   border-radius: 30px;
   width: 450px;
   height: 40px;
+  cursor: pointer;
+  border: none;
 }
+
+button:hover {
+  background-color: #a4d4d8;
+}
+
+button:focus {
+  background-color: #a4d4d8;
+  box-shadow: none;
+  border: none;
+  outline: none;
+}
+
+.dropdown {
+  height: 20px;
+}
+
+.dropdown-menu {
+  background-color: transparent;
+  border: none;
+  padding: none;
+}
+
+.nav-explanation {
+  border-top-left-radius: 5px;
+  border-top-right-radius: 5px;
+  background-color: #4B7986;
+}
+
+.nav-click {
+  border-bottom-left-radius: 5px;
+  border-bottom-right-radius: 5px;
+  background-color: #364252;
+}
+
+.dropdown:hover .dropdown-menu, .btn-group:hover .dropdown-menu{
+    display: block;
+    margin: 30px;
+  }
 
 .alert-message {
   color: white;
@@ -248,6 +304,94 @@ button {
 }
 
 .wrapper-data-vis {
+  background-color: white;
+  color: #364252;
+  font-family: 'Roboto', sans-serif;
+}
+
+.top-nav {
+  background-color: #364252;
+  color: white;
+}
+
+.all-results {
+  position: relative;
+  z-index: 10 !important;
+}
+
+.all-results:hover {
+  color: #364252aa;
+  cursor: pointer;
+}
+
+.prompt {
+  font: 700 24px 'Roboto', sans-serif;
+  padding-top: 30px;
+}
+
+.options {
+  width: 300px;
+}
+
+.yes-no {
+  font-size: 20px;
+  font-weight: 400;
+  width: 300px;
+  height: auto;
+  padding: 5px;
+  margin: 5px;
+  color: #364252;
+  z-index: 10;
+}
+
+.yes-no:hover {
+  color: #364252aa;
+  cursor: pointer;
+}
+
+.node {
+  width: 300px;
+  font-family: 'Roboto', sans-serif;
+}
+
+.l-2 {
+  margin: 100px 10vw;
+}
+
+.l-3 {
+  margin: 100px 5vw;
+}
+
+.l-4 {
+  margin-left: 33vw;
+}
+
+.percentages {
+  margin: 100px 100px;
+}
+
+.percentage-node {
+  width: 160px;
+  padding-top: 30px;
+  opacity: 0;
+}
+
+.total-percentage {
+  font-size: 16px;
+  font-weight: 700;
+}
+
+.sub-percentage {
+  font-size: 16px;
+  font-weight: 400;
+}
+
+footer {
+  background-color: #364252;
+  color: white;
+}
+
+/* .wrapper-data-vis {
   background-color: white;
   color: #364252;
   font-family: 'Roboto', sans-serif;
@@ -270,8 +414,11 @@ button {
 .yes-no {
   font-size: 20px;
   font-weight: 400;
-  padding: 10px;
+  padding: 5px;
+  margin: 5px;
   text-align: center;
+  color: white;
+  background-color: #364252;
 }
 
 .node {
@@ -313,4 +460,4 @@ button {
 footer {
   background-color: #364252;
   color: white;
-}
+} */
