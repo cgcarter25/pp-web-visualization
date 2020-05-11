@@ -640,7 +640,7 @@ function hideAllResults() {
     arrow3bRight = 0;
     arrow4Left = 0;
     arrow4Right = 0;
-  }, 4);
+  }, 0);
 }
 // function drawArrows() {
 //   document.querySelector('.svg').innerHTML = `<svg class="arrow-canvas" width="${document.querySelector('body').clientWidth}" height="${document.querySelector('body').clientHeight}"></svg>`
