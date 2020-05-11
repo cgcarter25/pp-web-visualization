@@ -17,7 +17,7 @@ function loginIntro(e) {
     // Runs 5 times, with values of step 0 through 4.
     console.log(password.value);
     setTimeout( () => {
-      window.location.href = 'data-vis.html';
+      window.location.href = 'pp-care-consideration-young-adults.html';
     }, 500)
 
   } else {

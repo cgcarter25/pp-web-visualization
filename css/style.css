@@ -44,6 +44,10 @@
   border: solid #4B7986 8px;
 }
 
+.nav-image:hover {
+  opacity: 0.5;
+}
+
 #sorry-intro {
   font-family: 'DIN-light', sans-serif;
   font-size: 40px;
