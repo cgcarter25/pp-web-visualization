@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.1/css/bootstrap.min.css" integrity="sha384-WskhaSGFgHYWDcbwN70/dfYBj47jz9qbsMId/iRN3ewGhXQFZCSftd1LZCfmhktB" crossorigin="anonymous">
+  <link rel="stylesheet" href="css/style.css">
+  <title>PU | Planned Parenthood</title>
+</head>
+<body>
+  <div class="wrapper-unsupported">
+    <div class="unsupported-container">
+      <p class="text-white text-center px-5 my-2" id="sorry-intro"><span class="font-weight-bold" id="sorry">Sorry.</span> Your device is not currently supported.</p>
+      <p class="text-white text-center px-5 my-2" id="please">Please increase your browser resolution to view this page. Thank you!</p>
+      <div class="d-flex justify-content-center">
+        <div class="d-block">
+          <img src="img/width-neg.png" width="100px" class="active-image width-image mx-auto my-3 d-block" id="width-neg">
+          <img src="img/width-pos.png" width="100px" class="inactive-image width-image mx-auto my-3 d-block" id="width-pos">
+          <p class="text-white px-5 text-center">Width</p>
+          <p class="text-white px-5 text-center" id="width"></p>
+        </div>
+        <div class="d-block">
+          <img src="img/height-neg.png" height="100px" class="" id="height-neg">
+          <img src="img/height-pos.png" height="100px" class="" id="height-pos">
+          <p class="text-white px-5 text-center">Height</p>
+          <p class="text-white px-5 text-center" id="height"></p>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="wrapper-data-vis">
+    <div class="svg"></div>
+    <div class="top-nav">
+      <h1 class="text-center py-3 mb-5">Differentiators of Care Consideration Among Young Adults</h1>
+    </div>
+    <div class="node mx-auto">
+      <h2 class="text-center prompt">In your own view, is Planned Parenthood for:</h2>
+      <div class="options d-flex justify-content-center" id="option-1">
+        <h3 class="yes-no">Other people / not sure</h3>
+        <h3 class="yes-no">People like me</h3>
+      </div>
+    </div>
+    <div class="d-flex justify-content-center">
+      <div class="node l-2">
+        <h2 class="text-center prompt" id="question-2-left">If I were a patient at Planned Parenthood, I would feel comfortable telling my friends that I went there.</h2>
+        <div class="options d-flex justify-content-center" id="option-2-left">
+          <h3 class="yes-no">Disagree / not sure</h3>
+          <h3 class="yes-no">Agree</h3>
+        </div>
+      </div>
+      <div class="node l-2">
+        <h2 class="text-center prompt" id="question-2-right">Is Planned Parenthood convenient?</h2>
+        <div class="options d-flex justify-content-center" id="option-2-right">
+          <h3 class="yes-no">No / not sure</h3>
+          <h3 class="yes-no">Yes</h3>
+        </div>
+      </div>
+    </div>
+    <div class="d-flex justify-content-center">
+      <div class="node l-3">
+        <h2 class="text-center prompt" id="question-3-left">Race / Ethnicity</h2>
+        <div class="options d-flex justify-content-center" id="option-3-left">
+          <h3 class="yes-no"><u>Not</u> Black</h3>
+          <h3 class="yes-no">Black</h3>
+        </div>
+      </div>
+      <div class="node l-3">
+        <h2 class="text-center prompt" id="question-3-right">Are you very familiar with Planned Parenthood?</h2>
+        <div class="options d-flex justify-content-center" id="option-3-right">
+          <h3 class="yes-no">No</h3>
+          <h3 class="yes-no">Yes</h3>
+        </div>
+      </div>
+    </div>
+    <div class="node l-4">
+      <h2 class="text-center prompt" id="question-4">Planned Parenthood stands with all people.</h2>
+      <div class="options d-flex justify-content-center" id="option-4">
+        <h3 class="yes-no"><u>Not</u> strongly agree</h3>
+        <h3 class="yes-no">Strongly agree</h3>
+      </div>
+    </div>
+    <div class="percentages d-flex justify-content-around">
+      <div class="percentage-node" id="percentage-node-1">
+        <h3 class="total-percentage">50% of Total</h3>
+        <h4 class="sub-percentage">4% Would consider PP for care</h4>
+        <h4 class="sub-percentage">96% Would <u>not</u> consider PP for care</h4>
+      </div>
+      <div class="percentage-node" id="percentage-node-2">
+        <h3 class="total-percentage">19% of Total</h3>
+        <h4 class="sub-percentage">24% Would consider PP for care</h4>
+        <h4 class="sub-percentage">76% Would <u>not</u> consider PP for care</h4>
+      </div>
+      <div class="percentage-node" id="percentage-node-3">
+        <h3 class="total-percentage">2% of Total</h3>
+        <h4 class="sub-percentage">27% Would consider PP for care</h4>
+        <h4 class="sub-percentage">73% Would <u>not</u> consider PP for care</h4>
+      </div>
+      <div class="percentage-node" id="percentage-node-4">
+        <h3 class="total-percentage">1% of Total</h3>
+        <h4 class="sub-percentage">88% Would consider PP for care</h4>
+        <h4 class="sub-percentage">12% Would <u>not</u> consider PP for care</h4>
+      </div>
+      <div class="percentage-node" id="percentage-node-5">
+        <h3 class="total-percentage">4% of Total</h3>
+        <h4 class="sub-percentage">34% Would consider PP for care</h4>
+        <h4 class="sub-percentage">66% Would <u>not</u> consider PP for care</h4>
+      </div>
+      <div class="percentage-node" id="percentage-node-6">
+        <h3 class="total-percentage">3% of Total</h3>
+        <h4 class="sub-percentage">68% Would consider PP for care</h4>
+        <h4 class="sub-percentage">32% Would <u>not</u> consider PP for care</h4>
+      </div>
+      <div class="percentage-node" id="percentage-node-7">
+        <h3 class="total-percentage">21% of Total</h3>
+        <h4 class="sub-percentage">76% Would consider PP for care</h4>
+        <h4 class="sub-percentage">24% Would <u>not</u> consider PP for care</h4>
+      </div>
+    </div>
+    <footer>
+      <h5 class="text-center py-3 mt-5 mb-0">PerryUndem | Brand Tracker</h5>
+    </footer>
+  </div>
+  <script src="https://code.jquery.com/jquery-3.3.1.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8=" crossorigin="anonymous"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.1/js/bootstrap.min.js" integrity="sha384-smHYKdLADwkXOn1EmN1qk/HfnUcbVRZyYmZ4qpPea6sjB/pTJ0euyQp0Mk8ck+5T" crossorigin="anonymous"></script>
+  <script src="js/tree.js"></script>
+</body>
+</html>

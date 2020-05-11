@@ -1,0 +1,316 @@
+@font-face {
+  font-family: 'DIN-bold';
+  src: url('../fonts/DIN-bold.otf'); /* IE9 Compat Modes */
+  src: url('../fonts/DIN-bold.otf') format('embedded-opentype'), /* IE6-IE8 */
+       url('../fonts/DIN-bold.otf') format('woff2'), /* Super Modern Browsers */
+       url('../fonts/DIN-bold.otf') format('woff'), /* Pretty Modern Browsers */
+       url('../fonts/DIN-bold.otf')  format('truetype'), /* Safari, Android, iOS */
+       url('../fonts/DIN-bold.otf') format('svg'); /* Legacy iOS */
+}
+
+@font-face {
+  font-family: 'DIN-reg';
+  src: url('../fonts/DIN-reg.otf'); /* IE9 Compat Modes */
+  src: url('../fonts/DIN-reg.otf') format('embedded-opentype'), /* IE6-IE8 */
+       url('../fonts/DIN-reg.otf') format('woff2'), /* Super Modern Browsers */
+       url('../fonts/DIN-reg.otf') format('woff'), /* Pretty Modern Browsers */
+       url('../fonts/DIN-reg.otf')  format('truetype'), /* Safari, Android, iOS */
+       url('../fonts/DIN-reg.otf') format('svg'); /* Legacy iOS */
+}
+
+@font-face {
+  font-family: 'DIN-light';
+  src: url('../fonts/DIN-light.otf'); /* IE9 Compat Modes */
+  src: url('../fonts/DIN-light.otf') format('embedded-opentype'), /* IE6-IE8 */
+       url('../fonts/DIN-light.otf') format('woff2'), /* Super Modern Browsers */
+       url('../fonts/DIN-light.otf') format('woff'), /* Pretty Modern Browsers */
+       url('../fonts/DIN-light.otf')  format('truetype'), /* Safari, Android, iOS */
+       url('../fonts/DIN-light.otf') format('svg'); /* Legacy iOS */
+}
+
+.wrapper-unsupported {
+  display: none;
+  width: 100vw;
+  height: 100vh;
+  background-image:radial-gradient(circle at top, #4B7986, #364252);
+}
+
+.unsupported-container {
+  position: absolute;
+  width: 90vw;
+  height: 90vh;
+  margin: 5vh 5vw;
+  padding-top: 20vh;
+  border: solid #4B7986 8px;
+}
+
+#sorry-intro {
+  font-family: 'DIN-light', sans-serif;
+  font-size: 40px;
+}
+
+#sorry {
+  font-family: 'DIN-bold', sans-serif;
+  font-size: 40px;
+}
+
+#please {
+  font-size: 20px;
+}
+
+.width-image {
+  padding-top: 30px;
+  padding-bottom: 30px;
+}
+
+.inactive-image {
+  opacity: 0;
+  position: absolute;
+}
+
+.active-image {
+  opacity: 1;
+  position: relative;
+}
+
+.arrow-canvas {
+  position: absolute;
+}
+
+.wrapper {
+  height: 100vh;
+  width: 100vw;
+  background-image:
+      radial-gradient(
+        circle at top,
+        #4B7986,
+        #364252
+      );
+  color: white;
+  text-align: center;
+  font-family: 'Roboto', sans-serif;
+}
+
+.intro {
+  display: inline-block;
+  margin: 20vh auto;
+  width: 600px;
+  border: 1px solid rgba(255, 255, 255, .5);
+  padding: 20px;
+  border-radius: 10px;
+  background-color: rgba(54,66,82, .3);
+}
+
+h1, h2 {
+  font-family: 'DIN-bold', sans-serif;
+}
+
+form {
+  width: 450px;
+}
+
+input[type=password] {
+  background-color: transparent;
+  box-shadow: none;
+  border-radius: 0;
+  -webkit-box-shadow: none;
+  border: none;
+  color: white;
+
+  border-bottom: 2px solid white;
+}
+
+input[type=password]::placeholder { /* Chrome, Firefox, Opera, Safari 10.1+ */
+  color: white;
+  opacity: 1; /* Firefox */
+}
+
+input[type=password]:-ms-input-placeholder { /* Internet Explorer 10-11 */
+  color: white;
+}
+
+input[type=password]::-ms-input-placeholder { /* Microsoft Edge */
+  color: white;
+}
+
+input[type=password]:focus, textarea:focus, select:focus {
+  outline: none;
+  background: none;
+  color: white;
+  box-shadow: none;
+}
+
+input[type=password]:active, textarea:active, select:active {
+  outline: none;
+  background: none;
+  color: white;
+  box-shadow: none;
+}
+
+input[type=text] {
+  background-color: transparent;
+  box-shadow: none;
+  border-radius: 0;
+  -webkit-box-shadow: none;
+  border: none;
+  border-bottom: 2px solid white;
+  color: white;
+
+}
+
+input[type=text]::placeholder { /* Chrome, Firefox, Opera, Safari 10.1+ */
+  color: white;
+  opacity: 1; /* Firefox */
+}
+
+input[type=text]:-ms-input-placeholder { /* Internet Explorer 10-11 */
+  color: white;
+}
+
+input[type=text]::-ms-input-placeholder { /* Microsoft Edge */
+  color: white;
+}
+
+input[type=text]:focus, textarea:focus, select:focus {
+  outline: none;
+  background: none;
+  color: white;
+  box-shadow: none;
+}
+
+input[type=password]:active, textarea:active, select:active {
+  outline: none;
+  background: none;
+  color: white;
+  box-shadow: none;
+}
+
+
+.checkbox-label input {
+  position: absolute;
+  opacity: 0;
+  cursor: pointer;
+}
+
+/* .checkbox-label .checkbox-custom-static {
+  position: absolute;
+  height: 24px;
+  width: 24px;
+  background-color: transparent;
+  border-radius: 12px;
+  border: 2px solid white;
+} */
+
+.checkbox-label .checkbox-custom {
+  position: absolute;
+  height: 24px;
+  width: 24px;
+  background-color: transparent;
+  border-radius: 12px;
+  border: 2px solid white;
+  -webkit-transition: all 0.3s ease-out;
+  -moz-transition: all 0.3s ease-out;
+  -ms-transition: all 0.3s ease-out;
+  -o-transition: all 0.3s ease-out;
+}
+
+.checkbox-label .checkbox-custom::after {
+  position: absolute;
+  height: 24px;
+  width: 24px;
+  background-color: transparent;
+  border-radius: 12px;
+  border: 2px solid white;
+  transition: all 0.3s ease-out;
+  -webkit-transition: all 0.3s ease-out;
+  -moz-transition: all 0.3s ease-out;
+  -ms-transition: all 0.3s ease-out;
+  -o-transition: all 0.3s ease-out;
+}
+
+.checkbox-label input:checked ~ .checkbox-custom {
+  padding: 4px;
+  position: absolute;
+  background-color: white;
+  height: 24px;
+  width: 24px;
+}
+
+button {
+  border-radius: 30px;
+  width: 450px;
+  height: 40px;
+}
+
+.alert-message {
+  color: white;
+  z-index: 700;
+}
+
+.wrapper-data-vis {
+  background-color: white;
+  color: #364252;
+  font-family: 'Roboto', sans-serif;
+}
+
+.top-nav {
+  background-color: #364252;
+  color: white;
+}
+
+.prompt {
+  font: 700 24px 'Roboto', sans-serif;
+  padding-top: 30px;
+}
+
+.options {
+  width: 300px;
+}
+
+.yes-no {
+  font-size: 20px;
+  font-weight: 400;
+  padding: 10px;
+  text-align: center;
+}
+
+.node {
+  width: 300px;
+  font-family: 'Roboto', sans-serif;
+}
+
+.l-2 {
+  margin: 100px 10vw;
+}
+
+.l-3 {
+  margin: 100px 5vw;
+}
+
+.l-4 {
+  margin-left: 33vw;
+}
+
+.percentages {
+  margin: 100px 100px;
+}
+
+.percentage-node {
+  width: 160px;
+  padding-top: 30px;
+}
+
+.total-percentage {
+  font-size: 16px;
+  font-weight: 700;
+}
+
+.sub-percentage {
+  font-size: 16px;
+  font-weight: 400;
+}
+
+footer {
+  background-color: #364252;
+  color: white;
+}
