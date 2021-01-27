@@ -1,0 +1,82 @@
+body {
+  font-family: 'Open Sans', sans-serif;
+  font-size: 11px;
+  font-weight: 300;
+  fill: #242424;
+  text-align: center;
+  text-shadow: 0 1px 0 #fff, 1px 0 0 #fff, -1px 0 0 #fff, 0 -1px 0 #fff;
+  cursor: default;
+}
+
+.radarChart {
+  margin-left: 40px;
+}
+
+.legend {
+  font-family: 'Raleway', sans-serif;
+  fill: #333333;
+}
+
+.tooltip {
+  fill: #333333;
+}
+
+.main-container {
+  display: flex;
+}
+
+.barChart {
+  width: 30vw;
+  /* height: 100vh; */
+}
+
+.main-title {
+  font-family: 'Open Sans', sans-serif;
+  font-size: 24px;
+  font-weight: 600;
+  fill: #242424;
+  margin: 15px;
+}
+
+button {
+  border-color: none;
+  border-style: none;
+  border-width: 0;
+  background-color: #0f3057;
+  color: white;
+  padding: 10px;
+  margin: 20px 15px;
+  width: 150px;
+  display: block;
+  font-family: 'Open Sans', sans-serif;
+  font-size: 12px;
+  font-weight: 400;
+
+}
+
+button:hover {
+  cursor: pointer;
+  background-color: #00587a;
+}
+
+button:focus {
+  background-color: #eb5e0b;
+  border-color: none;
+  border-style: none;
+  border-width: 0;
+  outline: none;
+}
+
+.button-container {
+  display: block;
+  margin-top: 25px
+}
+
+
+.label {
+    font-size: 10px;
+}
+
+.label-empty {
+  display: none;
+}

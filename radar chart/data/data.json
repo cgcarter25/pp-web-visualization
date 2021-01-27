@@ -1,0 +1,15 @@
+[
+  {
+    className: "Socially progressive views",
+    axes : [
+      { axis: "Far left", value: "1"},
+      { axis: "Establishment Democrats", value: "0.691866230665645"},
+      { axis: "Anti-Trump, socially progressive, economically moderate", value: "0.829651427015995"},
+      { axis: "Left-leaning, unengaged independents", value: "0.370380229823861"},
+      { axis: "Right-leaning independents", value: "0.463607224954223"},
+      { axis: "Trump-skeptical staunch social conservatives", value: "0.151199782239314"},
+      { axis: "Trump's Base", value: "0.275976895303396"},
+      { axis: "Conspiratorial alt/far-right", value: "0.01199122721816721"}
+    ]
+  }
+]

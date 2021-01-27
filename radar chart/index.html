@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta http-equiv="Content-Type" content="text/html;charset=utf-8"/ >
+		<title>Smoothed D3.js Radar Chart</title>
+
+		<!-- Google fonts -->
+		<link href="https://fonts.googleapis.com/css?family=Open+Sans:400,300" rel='stylesheet' type='text/css'>
+		<link href='https://fonts.googleapis.com/css?family=Raleway' rel='stylesheet' type='text/css'>
+
+    <!-- CSS -->
+    <link rel="stylesheet" href="css/style.css">
+		<!-- D3.js -->
+		<script src="https://cdnjs.cloudflare.com/ajax/libs/d3/3.5.6/d3.min.js" charset="utf-8"></script>
+
+	</head>
+	<body>
+		<div class="main-title">Far Left</div>
+
+    <div class="main-container">
+      <div class="radarChart"></div>
+      <div class="barChart">
+      </div>
+			<div class="button-container">
+				<button onclick="FarLeft();">Far Left</button>
+				<button onclick="EstablishmentDemocrats();">Establishment Democrats</button>
+				<button onclick="AntiTrumpSociallyProgressiveEconomicallyModerate();">Anti-Trump, socially progressive, economically moderate</button>
+				<button onclick="LeftLeaningUnengagedIndependents();">Left-leaning, unengaged independents</button>
+				<button onclick="RightLeaningIndependents();">Right-leaning independents</button>
+				<button onclick="TrumpSkepticalStaunchSocialConservatives();">Trump-skeptical staunch social conservatives</button>
+				<button onclick="TrumpsBase();">Trump's Base</button>
+				<button onclick="ConspiratorialAltFarRight();">Conspiratorial Alt Far Right</button>
+			</div>
+
+    </div>
+		<script src="js/radar.js"></script>
+		<script>
+
+      /* Radar chart design created by Nadieh Bremer - VisualCinnamon.com */
+
+			//////////////////////////////////////////////////////////////
+			//////////////////////// Set-Up //////////////////////////////
+			//////////////////////////////////////////////////////////////
+
+			var margin = {top: 100, right: 100, bottom: 100, left: 100},
+				width = Math.min(700, window.innerWidth - 10) - margin.left - margin.right,
+				height = Math.min(width, window.innerHeight - margin.top - margin.bottom - 20);
+
+			//////////////////////////////////////////////////////////////
+			////////////////////////// Data //////////////////////////////
+			//////////////////////////////////////////////////////////////
+
+			var farLeft = [
+			  [//Far Left
+				{axis:"Socially Progressive Views",value:1},
+				{axis:"Progressive Economic Views",value:1},
+				{axis:"More Democrat-Leaning",value:1},
+				{axis:"Worry About Trump's Power",value:0.846669101},
+				{axis:"Toxic Masculine Characteristics",value:0.185901249},
+        {axis:"Alignment with Donald Trump",value:0.030979606},
+				{axis:"Explicit Racist, Sexist, Nationalistic, Anti-Democratic Views",value:0.104165582},
+        {axis:"Conspiratorial Right-Wing Views",value:0.167642002}
+			  ]
+      ];
+
+      var establishmentDemocrats = [
+        [//establishment Democrats
+				{axis:"Socially Progressive Views",value:0.691866231},
+				{axis:"Progressive Economic Views",value:0.748447892},
+				{axis:"More Democrat-Leaning",value:0.865936104},
+				{axis:"Worry About Trump's Power",value:0.857761606},
+				{axis:"Toxic Masculine Characteristics",value:0.478881618},
+        {axis:"Alignment with Donald Trump",value:0.068102468},
+				{axis:"Explicit Racist, Sexist, Nationalistic, Anti-Democratic Views",value:0.282653306},
+        {axis:"Conspiratorial Right-Wing Views",value:0.209284351}
+			  ]
+      ];
+      var antiTrumpSociallyProgressiveEconomicallyModerate = [
+        [//Anti-Trump, socially progressive, economically moderate
+        {axis:"Socially Progressive Views",value:0.829651427},
+        {axis:"Progressive Economic Views",value:0.594813265},
+        {axis:"More Democrat-Leaning",value:0.921363947},
+        {axis:"Worry About Trump's Power",value:1},
+        {axis:"Toxic Masculine Characteristics",value:0.47174301},
+        {axis:"Alignment with Donald Trump",value:0.120941284},
+        {axis:"Explicit Racist, Sexist, Nationalistic, Anti-Democratic Views",value:0.409360319},
+        {axis:"Conspiratorial Right-Wing Views",value:0.729072354}
+        ]
+      ];
+      var leftLeaningUnengagedIndependents = [
+        [//Left-leaning, unengaged independents
+        {axis:"Socially Progressive Views",value:0.37038023},
+        {axis:"Progressive Economic Views",value:0.565109172},
+        {axis:"More Democrat-Leaning",value:0.697089878},
+        {axis:"Worry About Trump's Power",value:0.5167268933},
+        {axis:"Toxic Masculine Characteristics",value:0.595330161},
+        {axis:"Alignment with Donald Trump",value:0.238456224},
+        {axis:"Explicit Racist, Sexist, Nationalistic, Anti-Democratic Views",value:0.513442568},
+        {axis:"Conspiratorial Right-Wing Views",value:0.15773617}
+        ]
+      ];
+      var rightLeaningIndependents = [
+        [//Right-leaning independents
+        {axis:"Socially Progressive Views",value:0.463607225},
+        {axis:"Progressive Economic Views",value:0.442046118},
+        {axis:"More Democrat-Leaning",value:0.424524342},
+        {axis:"Worry About Trump's Power",value:0.419815419},
+        {axis:"Toxic Masculine Characteristics",value:0.496895449},
+        {axis:"Alignment with Donald Trump",value:0.52948484},
+        {axis:"Explicit Racist, Sexist, Nationalistic, Anti-Democratic Views",value:0.724617452},
+        {axis:"Conspiratorial Right-Wing Views",value:0.626338786}
+        ]
+      ];
+      var trumpSkepticalStaunchSocialConservatives = [
+        [//Trump-skeptical staunch social conservatives
+        {axis:"Socially Progressive Views",value:0.151199782},
+        {axis:"Progressive Economic Views",value:0.288893425},
+        {axis:"More Democrat-Leaning",value:0.173407909},
+        {axis:"Worry About Trump's Power",value:0.187552724},
+        {axis:"Toxic Masculine Characteristics",value:0.630149465},
+        {axis:"Alignment with Donald Trump",value:0.78228772},
+        {axis:"Explicit Racist, Sexist, Nationalistic, Anti-Democratic Views",value:0.787533463},
+        {axis:"Conspiratorial Right-Wing Views",value:0.307948326}
+      ]
+      ];
+      var trumpsBase = [
+        [//Trump's Base
+        {axis:"Socially Progressive Views",value:0.275976895},
+        {axis:"Progressive Economic Views",value:0.239458421},
+        {axis:"More Democrat-Leaning",value:0.06435131},
+        {axis:"Worry About Trump's Power",value:0.172972565},
+        {axis:"Toxic Masculine Characteristics",value:0.801829268},
+        {axis:"Alignment with Donald Trump",value:0.934465741},
+        {axis:"Explicit Racist, Sexist, Nationalistic, Anti-Democratic Views",value:0.976864824},
+        {axis:"Conspiratorial Right-Wing Views",value:0.966055176}
+        ]
+      ];
+      var conspiratorialAltFarRight = [
+        [//Conspiratorial alt/far-right
+        {axis:"Socially Progressive Views",value:0.011991227},
+        {axis:"Progressive Economic Views",value:0.056698021},
+        {axis:"More Democrat-Leaning",value:0.03997969},
+        {axis:"Worry About Trump's Power",value:0.125908112},
+        {axis:"Toxic Masculine Characteristics",value:1},
+        {axis:"Alignment with Donald Trump",value:1},
+        {axis:"Explicit Racist, Sexist, Nationalistic, Anti-Democratic Views",value:1},
+        {axis:"Conspiratorial Right-Wing Views",value:1}
+        ]
+			];
+			//////////////////////////////////////////////////////////////
+			//////////////////// Draw the Chart //////////////////////////
+			//////////////////////////////////////////////////////////////
+
+			var color = d3.scale.ordinal()
+				.range(["#eb5e0b","#CC333F","#00A0B0"]);
+
+			var radarChartOptions = {
+			  w: width,
+			  h: height,
+			  margin: margin,
+			  maxValue: 1,
+			  levels: 5,
+			  roundStrokes: false,
+			  color: color
+			};
+			// //Call function to draw the Radar chart
+			FarLeft();
+
+		</script>
+	</body>
+</html>
