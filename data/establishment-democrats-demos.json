@@ -25,5 +25,5 @@
 	{ "name": "", "value": 0, "fill": "#0f3057", "class": "label-empty" },
 	{ "name": "Democrat", "value": 0.52, "fill": "#0f3057", "class": "label" },
 	{ "name": "Independent", "value": 0.42, "fill": "#0f3057", "class": "label" },
-	{	"name": "Republican", "value": 0.6, "fill": "#0f3057", "class": "label" }
+	{	"name": "Republican", "value": 0.06, "fill": "#0f3057", "class": "label" }
 ]
